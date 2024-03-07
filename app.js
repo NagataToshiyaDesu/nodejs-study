@@ -1,8 +1,10 @@
 'use strict'
 let number = process.argv[2] || 0
 
-let sum = 0;
-for(let i = 0;i <= number;i++){
-    sum += i;
+function factorial(number){
+    if(number <= 0){
+        return 1;
+    }
+    return number *factorial(number-1);
 }
-console.log(sum);
+console.log("10の階乗は3628800で、結果は"+factorial(number)+"でした。");
